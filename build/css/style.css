@@ -32,8 +32,60 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-skrill:before { content: ""; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+.slick-slider { position: relative; display: block; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
+.slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
+.slick-list:focus { outline: none; }
+.slick-loading .slick-list { background: white; }
+.slick-list.dragging { cursor: pointer; cursor: hand; }
+
+.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+.slick-track { position: relative; left: 0; top: 0; display: block; zoom: 1; }
+.slick-track:before, .slick-track:after { content: ""; display: table; }
+.slick-track:after { clear: both; }
+.slick-loading .slick-track { visibility: hidden; }
+
+.slick-slide { float: left; height: 100%; min-height: 1px; }
+.slick-slide img { display: block; max-width: 100%; }
+.slick-slide.slick-loading img { display: none; }
+.slick-slide.dragging img { pointer-events: none; }
+.slick-initialized .slick-slide { display: block; }
+.slick-loading .slick-slide { visibility: hidden; }
+.slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
+
+.slick-prev, .slick-next { position: absolute; top: 50%; margin-top: -10px; font: 0/0 a; text-shadow: none; color: transparent; height: 20px; background: none; left: 0; z-index: 1; }
+.slick-prev:focus, .slick-next:focus { outline: none; }
+.slick-prev.slick-disabled, .slick-next.slick-disabled { opacity: 0.2; }
+.slick-prev:before, .slick-next:before { height: 30px; line-height: 30px; content: "prev"; display: inline-block; vertical-align: middle; font-size: 15px; color: #fff; background: #000; }
+
+.slick-next { right: 0; left: auto; }
+.slick-next:before { content: "next"; display: inline-block; }
+
+.slick-dots { text-align: center; position: absolute; margin: 0; bottom: 0; left: 0; right: 0; }
+.slick-dots li { position: relative; display: inline-block; padding: 0 3px; }
+.slick-dots li.slick-active button { background: #000; }
+.slick-dots button { display: block; width: 10px; height: 10px; background: #fff; -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); cursor: pointer; font: 0/0 a; text-shadow: none; color: transparent; -webkit-border-radius: 50%; border-radius: 50%; }
+
+@font-face { font-family: PFDDbold; src: url("fonts/pfdindisplayprobold.eot"); src: url("fonts/pfdindisplayprobold.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplayprobold.woff2") format("woff2"), url("fonts/pfdindisplayprobold.woff") format("woff"), url("fonts/pfdindisplayprobold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: PFDDmed; src: url("fonts/pfdindisplaypromedium.eot"); src: url("fonts/pfdindisplaypromedium.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypromedium.woff2") format("woff2"), url("fonts/pfdindisplaypromedium.woff") format("woff"), url("fonts/pfdindisplaypromedium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: PFDDreg; src: url("fonts/pfdindisplayproregular.eot"); src: url("fonts/pfdindisplayproregular.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplayproregular.woff2") format("woff2"), url("fonts/pfdindisplayproregular.woff") format("woff"), url("fonts/pfdindisplayproregular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: PFDDlight; src: url("fonts/pfdindisplayprolight.eot"); src: url("fonts/pfdindisplayprolight.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplayprolight.woff2") format("woff2"), url("fonts/pfdindisplayprolight.woff") format("woff"), url("fonts/pfdindisplayprolight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { font-family: "PFDDreg", sans-serif; font-size: 14px; line-height: 1; }
+
+.out { max-width: 1240px; overflow: hidden; margin: auto; }
+
+a { text-decoration: none; color: inherit; }
+
+.header { width: 100%; height: 100px; }
+.header__wrap { width: 1140px; margin: auto; }
+.header__logo { float: left; font: 0/0 a; text-shadow: none; color: transparent; width: 15%; min-width: 132px; }
+.header__nav { width: 85%; float: left; }
+.header__menu { display: inline-block; vertical-align: top; }
+.header__menu-drop { display: none; }
+
+.footer { width: 100%; }
+.footer__wrap { width: 1140px; margin: auto; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 

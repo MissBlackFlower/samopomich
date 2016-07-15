@@ -28,10 +28,33 @@
 // =book
 // 	font-family: "book", Arial, sans-serif
 @import url(https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic)
++font(PFDDbold, pfdindisplayprobold)
++font(PFDDmed, pfdindisplaypromedium)
++font(PFDDreg, pfdindisplayproregular)
++font(PFDDlight, pfdindisplayprolight)
+
+=pfdB
+	font-family: "PFDDbold" , sans-serif
+=pfdM
+	font-family: "PFDDmed" , sans-serif
+=pfdR
+	font-family: "PFDDreg" , sans-serif
+=pfdL
+	font-family: "PFDDlight", sans-serif
+=PTS
+	font-family: "PT Sans", sans-serif
 
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
-	line-height: 1.4
+	+pfdR
+	font-size: 14px
+	line-height: 1
 
 // common blocks
+.out
+	max-width: 1240px
+	overflow: hidden
+	margin: auto
+
+a
+	text-decoration: none
+	color: inherit
