@@ -1,8 +1,9 @@
 .header
   width: 100%
   height: 100px
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1)
   &__wrap
-    width: 1140px
+    max-width: 1140px
     margin: auto
     position: relative
   &__logo
@@ -16,20 +17,53 @@
     float: left
     padding: 0 30px
   &__menu
-    display: inline-block
-    vertical-align: top
+    float: left
     height: 100px
   &__menu-item
-    padding: 43px 20px
+    display: inline-block
+    vertical-align: middle
+    height: 100px
+    border-top: 2px solid transparent
     a
+      display: inline-block
+      width: 100%
+      padding: 41px 20px
       text-transform: uppercase
+    &:hover
+      border-top: 2px solid $green
+      background-color: $gray-bg
   &__menu-drop
     display: none
   &__drop-item
   &__buttons
     position: absolute
-    top: 30px
+    top: 32px
     right: 0
   &__search
+    display: inline-block
+    padding-right: 10px
+    border-right: 1px solid $head-border
+    background-color: transparent
+    i
+      color: $green
+      vertical-align: middle
+      font-size: 17px
+    &:hover
+      zoom: 1.2
   &__entry
+    display: inline-block
+    margin: 0 40px 0 9px
+    background-color: transparent
+    color: $green
+    +pfdB
+    font-size: 12px
+    text-transform: uppercase
   &__support
+    width: 120px
+    height: 40px
+    background-color: $yellow
+    color: $dark-gray
+    +pfdB
+    font-size: 12px
+    text-transform: uppercase
+    text-align: center
