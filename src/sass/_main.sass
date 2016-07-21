@@ -73,7 +73,7 @@
     float: left
     width: 24.6%
   &__col
-    padding: 25px
+    padding: 28px 25px 25px 30px
     h4
       +pfdL
       font-size: 22px
@@ -82,6 +82,13 @@
     p
       display: inline-block
       width: 100%
+      margin-top: 25px
+      padding-left: 10px
+      +pfdL
+      font-size: 16px
+      line-height: 1.2
+  &__social
+    padding-left: 55px
   &__more
     display: none
   &__icons
@@ -89,3 +96,32 @@
     vertical-align: middle
     font-size: 35px
     margin-right: 15px
+    color: $green
+  &__sign
+    position: relative
+    width: 100%
+    height: 40px
+    margin-top: 26px
+    border: 1px solid $grey-line-mail
+    input
+      height: 38px
+      width: 80%
+      float: left
+      padding: 12px
+      +pfdL
+      font-size: 16px
+      color: $black
+    button
+      height: 38px
+      width: 20%
+      position: absolute
+      top: 0
+      right: 0
+      background-color: transparent
+      text-align: left
+      i
+        font-size: 14px
+        color: $green
+      &:hover
+        i
+          padding-left: 7px

@@ -135,11 +135,17 @@ a { text-decoration: none; color: inherit; }
 .aid { position: relative; max-width: 1140px; min-height: 175px; margin: auto; margin-top: 404px; border-top: 5px solid #ffd800; background-color: #fff; }
 .aid__help, .aid__social { float: left; width: 25.4%; }
 .aid__join, .aid__mail { float: left; width: 24.6%; }
-.aid__col { padding: 25px; }
+.aid__col { padding: 28px 25px 25px 30px; }
 .aid__col h4 { font-family: "PFDDlight", sans-serif; font-size: 22px; text-transform: uppercase; line-height: 35px; }
-.aid__col p { display: inline-block; width: 100%; }
+.aid__col p { display: inline-block; width: 100%; margin-top: 25px; padding-left: 10px; font-family: "PFDDlight", sans-serif; font-size: 16px; line-height: 1.2; }
+.aid__social { padding-left: 55px; }
 .aid__more { display: none; }
-.aid__icons { float: left; vertical-align: middle; font-size: 35px; margin-right: 15px; }
+.aid__icons { float: left; vertical-align: middle; font-size: 35px; margin-right: 15px; color: #007848; }
+.aid__sign { position: relative; width: 100%; height: 40px; margin-top: 26px; border: 1px solid #d0d0d0; }
+.aid__sign input { height: 38px; width: 80%; float: left; padding: 12px; font-family: "PFDDlight", sans-serif; font-size: 16px; color: #000; }
+.aid__sign button { height: 38px; width: 20%; position: absolute; top: 0; right: 0; background-color: transparent; text-align: left; }
+.aid__sign button i { font-size: 14px; color: #007848; }
+.aid__sign button:hover i { padding-left: 7px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 
