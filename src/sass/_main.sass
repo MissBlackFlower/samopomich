@@ -64,6 +64,23 @@
   margin-top: 404px
   border-top: 5px solid $yellow
   background-color: $white
+  &:before, &:after
+    content: ""
+    position: absolute
+    top: 0
+    width: 0px
+    height: 0px
+    border-style: solid
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25)
+    opacity: .25
+  &:before
+    left: 100%
+    border-width: 81px 0 0 6px
+    border-color: transparent transparent transparent #000
+  &:after
+    right: 100%
+    border-width: 0 0 81px 6px
+    border-color: transparent transparent #000 transparent
   &__help,
   &__social
     float: left
@@ -73,7 +90,19 @@
     float: left
     width: 24.6%
   &__col
-    padding: 28px 25px 25px 30px
+    min-height: 175px
+    padding: 25px
+    position: relative
+    &::after
+      content: ""
+      position: absolute
+      top: 24px
+      bottom: 19px
+      left: -1px
+      border-left: 1px dotted $dots
+    &:first-child
+      &::after
+        border-color: transparent
     h4
       +pfdL
       font-size: 22px

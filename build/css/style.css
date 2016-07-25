@@ -133,9 +133,14 @@ a { text-decoration: none; color: inherit; }
 .members__post span { text-transform: uppercase; }
 
 .aid { position: relative; max-width: 1140px; min-height: 175px; margin: auto; margin-top: 404px; border-top: 5px solid #ffd800; background-color: #fff; }
+.aid:before, .aid:after { content: ""; position: absolute; top: 0; width: 0px; height: 0px; border-style: solid; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25); opacity: 0.25; }
+.aid:before { left: 100%; border-width: 81px 0 0 6px; border-color: transparent transparent transparent #000; }
+.aid:after { right: 100%; border-width: 0 0 81px 6px; border-color: transparent transparent #000 transparent; }
 .aid__help, .aid__social { float: left; width: 25.4%; }
 .aid__join, .aid__mail { float: left; width: 24.6%; }
-.aid__col { padding: 28px 25px 25px 30px; }
+.aid__col { min-height: 175px; padding: 25px; position: relative; }
+.aid__col::after { content: ""; position: absolute; top: 24px; bottom: 19px; left: -1px; border-left: 1px dotted #adadad; }
+.aid__col:first-child::after { border-color: transparent; }
 .aid__col h4 { font-family: "PFDDlight", sans-serif; font-size: 22px; text-transform: uppercase; line-height: 35px; }
 .aid__col p { display: inline-block; width: 100%; margin-top: 25px; padding-left: 10px; font-family: "PFDDlight", sans-serif; font-size: 16px; line-height: 1.2; }
 .aid__social { padding-left: 55px; }
