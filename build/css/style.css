@@ -123,7 +123,7 @@ a { text-decoration: none; color: inherit; }
 .header__support:hover { background-color: #007848; color: #fff; }
 
 .footer { width: 100%; background-color: #313236; color: #fff; }
-.footer__wrap { width: 1140px; padding: 45px 0; overflow: hidden; margin: auto; }
+.footer__wrap { max-width: 1140px; padding: 45px 0; overflow: hidden; margin: auto; }
 .footer__left-col { width: 20%; float: left; }
 .footer__nav { float: left; width: 80%; }
 .footer__bottom-row { float: left; width: 100%; }
@@ -135,36 +135,36 @@ a { text-decoration: none; color: inherit; }
 .footer__drop-item { width: 100%; padding-bottom: 30px; }
 .footer__drop-item a { font-family: "PFDDlight", sans-serif; font-size: 12px; }
 .footer__drop-item a:hover { color: #007848; }
-.footer__copy { width: 20%; float: left; padding-top: 45px; font-family: "PFDDlight", sans-serif; font-size: 12px; }
-.footer__socials { width: 60%; float: left; }
-.footer .soc { float: right; position: relative; margin-right: 10px; }
-.footer .soc i { width: 49px; height: 49px; -webkit-border-radius: 50%; border-radius: 50%; border: 1px solid; font-size: 24px; line-height: 47px; text-align: center; }
+.footer__copy { width: 30%; float: left; padding-top: 45px; font-family: "PFDDlight", sans-serif; font-size: 12px; }
+.footer__socials { width: 50%; float: left; }
+.footer__soc-item { float: right; margin-right: 10px; position: relative; }
+.footer__soc-item i { width: 49px; height: 49px; -webkit-border-radius: 50%; border-radius: 50%; border: 1px solid; font-size: 24px; line-height: 47px; text-align: center; }
 .footer .icon-ytb { border-color: #fff; color: #fff; }
-.footer .icon-ytb:hover { background-color: #d24a43; border-color: #d24a43; }
-.footer .icon-ytb:hover ~ .ytb-popup { display: block; }
-.footer .ytb-popup { position: absolute; bottom: 100%; left: 0; right: 10px; white-space: nowrap; background: #fff; margin-bottom: 13px; display: none; }
+.footer .is-ytb:hover .icon-ytb { background-color: #d24a43; border-color: #d24a43; }
+.footer .is-ytb:hover ~ .ytb-popup { display: block; }
+.footer .ytb-popup { position: absolute; bottom: 100%; left: 0; white-space: nowrap; background: #fff; margin-bottom: 13px; display: none; }
 .footer .ytb-popup:before { content: ""; position: absolute; top: 100%; left: 20px; width: 0px; height: 0px; border-style: solid; border-width: 6px 5.5px 0 5.5px; border-color: #fff transparent transparent transparent; }
-.footer .ytb-popup span { display: inline-block; vertical-align: top; font-family: "PFDDmed", sans-serif; white-space: nowrap; line-height: 40px; }
+.footer .ytb-popup span { display: inline-block; font-family: "PFDDmed", sans-serif; white-space: nowrap; line-height: 40px; }
 .footer .ytb-popup span.ytb-title { padding: 0 13px; font-size: 15px; color: #000; }
-.footer .ytb-popup span.ytb-amount { padding: 0 18px; font-size: 18px; position: relative; }
+.footer .ytb-popup span.ytb-amount { padding: 0 18px; font-size: 18px; color: #d24a43; position: relative; }
 .footer .ytb-popup span.ytb-amount:before { content: ""; position: absolute; top: 10px; bottom: 10px; left: 0; background-color: #dcdcdc; width: 1px; }
 .footer .icon-tw { border-color: #fff; color: #fff; }
-.footer .icon-tw:hover { background-color: #3dafea; border-color: #3dafea; }
-.footer .icon-tw:hover ~ .tw-popup { display: block; }
-.footer .tw-popup { position: absolute; bottom: 100%; left: 0; right: 10px; white-space: nowrap; background: #fff; margin-bottom: 13px; display: none; }
+.footer .is-tw:hover .icon-tw { background-color: #3dafea; border-color: #3dafea; }
+.footer .is-tw:hover ~ .tw-popup { display: block; }
+.footer .tw-popup { position: absolute; bottom: 100%; left: 0; white-space: nowrap; background: #fff; margin-bottom: 13px; display: none; }
 .footer .tw-popup:before { content: ""; position: absolute; top: 100%; left: 20px; width: 0px; height: 0px; border-style: solid; border-width: 6px 5.5px 0 5.5px; border-color: #fff transparent transparent transparent; }
-.footer .tw-popup span { display: inline-block; vertical-align: top; font-family: "PFDDmed", sans-serif; white-space: nowrap; line-height: 40px; }
+.footer .tw-popup span { display: inline-block; font-family: "PFDDmed", sans-serif; white-space: nowrap; line-height: 40px; }
 .footer .tw-popup span.tw-title { padding: 0 13px; font-size: 15px; color: #000; }
-.footer .tw-popup span.tw-amount { padding: 0 18px; font-size: 18px; position: relative; }
+.footer .tw-popup span.tw-amount { padding: 0 18px; font-size: 18px; color: #3dafea; position: relative; }
 .footer .tw-popup span.tw-amount:before { content: ""; position: absolute; top: 10px; bottom: 10px; left: 0; background-color: #dcdcdc; width: 1px; }
 .footer .icon-fb { border-color: #fff; color: #fff; }
-.footer .icon-fb:hover { background-color: #4357a8; border-color: #4357a8; }
-.footer .icon-fb:hover ~ .fb-popup { display: block; }
-.footer .fb-popup { position: absolute; bottom: 100%; left: 0; right: 10px; white-space: nowrap; background: #fff; margin-bottom: 13px; display: none; }
+.footer .is-fb:hover .icon-fb { background-color: #4357a8; border-color: #4357a8; }
+.footer .is-fb:hover ~ .fb-popup { display: block; }
+.footer .fb-popup { position: absolute; bottom: 100%; left: 0; white-space: nowrap; background: #fff; margin-bottom: 13px; display: none; }
 .footer .fb-popup:before { content: ""; position: absolute; top: 100%; left: 20px; width: 0px; height: 0px; border-style: solid; border-width: 6px 5.5px 0 5.5px; border-color: #fff transparent transparent transparent; }
-.footer .fb-popup span { display: inline-block; vertical-align: top; font-family: "PFDDmed", sans-serif; white-space: nowrap; line-height: 40px; }
+.footer .fb-popup span { display: inline-block; font-family: "PFDDmed", sans-serif; white-space: nowrap; line-height: 40px; }
 .footer .fb-popup span.fb-title { padding: 0 13px; font-size: 15px; color: #000; }
-.footer .fb-popup span.fb-amount { padding: 0 18px; font-size: 18px; position: relative; }
+.footer .fb-popup span.fb-amount { padding: 0 18px; font-size: 18px; color: #4357a8; position: relative; }
 .footer .fb-popup span.fb-amount:before { content: ""; position: absolute; top: 10px; bottom: 10px; left: 0; background-color: #dcdcdc; width: 1px; }
 .footer__copy-logo { width: 20%; float: right; padding-top: 30px; }
 .footer__copy-logo img { max-width: 140px; float: right; }
