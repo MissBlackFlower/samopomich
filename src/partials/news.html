@@ -1,12 +1,25 @@
+<!-- BEGIN  news -->
 <article class="news">
   <div class="news__btns">
-    <select class="news__select" name="activity">
-    </select>
-    <select class="news__select" name="fact">
-    </select>
-    <select class="news__select" name="date">
-    </select>
-    <button type="submit" name="sort" class="news__btn-sort"></button>
+    <form action="#" method="post">
+      <select class="news__select turnintodropdown" name="activity">
+        <option>Вид діяльності</option>
+        <option>Е-врядування</option>
+        <option>ЖКГ</option>
+      </select>
+      <select class="news__select turnintodropdown" name="fact">
+        <option>Тип події</option>
+        <option>Звернення</option>
+        <option>Проекти</option>
+        <option>Реформи</option>
+      </select>
+      <select class="news__select turnintodropdown" name="date">
+        <option>Дата</option>
+        <option>червень 2016</option>
+        <option>липень 2016</option>
+      </select>
+      <button type="submit" name="sort" class="news__btn-sort"></button>
+    </form>
   </div>
   <section class="news__item">
     <div class="news__info">
@@ -103,7 +116,8 @@
       <p class="news__text"></p>
     </div>
   </section>
-  <div class="news__more">  
+  <div class="news__more">
     <button type="button" name="button" class="news__load"><i class="load"></i></button>
   </div>
 </article>
+<!-- END news -->

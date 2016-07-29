@@ -1,6 +1,87 @@
 .news
   &__btns
-  &__select
+    width: 100%
+    overflow: hidden
+    padding: 10px 60px
+    background-color: $gray-bg
+.dropcontainer
+  // position:relative
+.trigger
+  position: relative
+  float: left
+  overflow: hidden
+  padding: 10px 30px 0 15px
+  margin-right: 7px
+  height: 35px
+  min-width: 110px
+  +pfdM
+  font-size: 12px
+  color: $select-txt
+  text-transform: uppercase
+  border-radius: 2px
+  border: 1px solid $light-gray-line
+  // background: #fff url(../images/select-arrow-open.png) 98% center no-repeat
+  -webkit-transition: all 0.5s ease
+  -moz-transition: all 0.5s ease
+  -o-transition: all 0.5s ease
+  transition: all 0.5s ease
+.trigger:hover
+  // background: #f5f5f5 url(../images/select-arrow-open.png) 98% center no-repeat
+.activetrigger
+  float: left
+  clear: both
+  padding: 10px 30px 0 15px
+  margin-right: 7px
+  height: 35px
+  min-width: 110px
+  border: 1px solid $light-gray-line
+  +pfdM
+  font-size: 12px
+  color: $select-txt
+  text-transform: uppercase
+  // background: #f5f5f5 url(../images/select-arrow-close.png) 98% center no-repeat
+  display: block
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+.activetrigger:hover
+  // background: #f5f5f5 url(../images/select-arrow-close.png) 98% center no-repeat
+  // color: #777
+.activetrigger:active
+  // background: #f5f5f5 url(../images/select-arrow-close.png) 98% center no-repeat
+  // color: #777
+.dropcontainer ul
+  clear: both
+  float: left
+  +pfdM
+  font-size: 12px
+  color: $select-txt
+  text-transform: uppercase
+  border: 1px solid $light-gray-line
+  list-style-type: none
+  width: inherit
+  z-index: 100
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+.dropcontainer ul li
+  padding: 5px
+  -webkit-transition: all 0.5s ease
+  -moz-transition: all 0.5s ease
+  -o-transition: all 0.5s ease
+  transition: all 0.5s ease
+.dropcontainer ul li:hover
+  background: #f5f5f5
+  outline: none
+.dropcontainer ul li:first-child
+  display: none
+.dropcontainer ul li:last-child
+  border-bottom: none
+.dropdownhidden
+  display: none
+.dropdownvisible
+  height: auto
+
   &__btn-sort
   &__item
   &__info

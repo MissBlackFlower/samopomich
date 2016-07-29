@@ -10,6 +10,87 @@
   &__left-col
     width: 20%
     float: left
+  &__copy-logo
+    width: 20%
+    float: right
+    padding-top: 30px
+    img
+      max-width: 140px
+      float: right
+  &__contacts
+    width: 100%
+  &__contact-item
+    width: 100%
+    margin-bottom: 12px
+    text-transform: uppercase
+    .title
+      +pfdM
+      font-size: 11px
+      line-height: 1.6
+      padding: 25px 50px 15px 0
+      padding-top: 25px
+      padding-bottom: 15px
+    p
+      +pfdM
+      font-size: 9px
+      line-height: 1.5
+    a
+      +pfdL
+      font-size: 13px
+      text-transform: none
+      text-decoration: underline
+      &:hover
+        color: $green
+  &__mail
+    width: 100%
+    margin-top: 40px
+    .icon-mail
+      float: left
+      vertical-align: middle
+      font-size: 28px
+      margin-right: 15px
+      color: $green
+
+    h4
+      +pfdR
+      font-size: 16px
+      font-weight: normal
+      text-transform: uppercase
+      line-height: 28px
+  &__sign
+    position: relative
+    width: 100%
+    height: 40px
+    margin-top: 13px
+    border: 1px solid $white
+    input
+      height: 38px
+      width: 80%
+      float: left
+      padding: 12px
+      +pfdL
+      font-size: 14px
+      color: $white
+      background-color: transparent
+      &:-moz-placeholder, &::-moz-placeholder
+        color: $white
+        opacity: 1
+      &::-webkit-input-placeholder
+        color: $white
+    button
+      height: 38px
+      width: 20%
+      position: absolute
+      top: 0
+      right: 0
+      background-color: transparent
+      text-align: left
+      i
+        font-size: 14px
+        color: $green
+      &:hover
+        i
+          padding-left: 7px
   &__nav
     float: left
     width: 80%
@@ -32,7 +113,7 @@
     width: 100%
   &__drop-item
     width: 100%
-    padding-bottom: 30px
+    padding-bottom: 25px
     a
       +pfdL
       font-size: 12px
@@ -109,11 +190,3 @@
             left: 0
             background-color: $grey-popup
             width: 1px
-
-  &__copy-logo
-    width: 20%
-    float: right
-    padding-top: 30px
-    img
-      max-width: 140px
-      float: right

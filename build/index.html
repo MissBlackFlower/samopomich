@@ -10,7 +10,7 @@
 	<script src="js/app.js"></script>
 </head>
 <body>
-<!-- BEGIN  out-->
+<!-- BEGIN  header -->
 <header class="header">
   <div class="header__wrap">
     <div class="header__logo"><a href="index.html"><img src="img/logo.svg" width="132"/><h1>Об'єднання «Самопоміч». Київ</h1></a></div>
@@ -95,7 +95,9 @@
     </div>
   </div>
 </header>
+<!-- END header -->
 
+<!-- BEGIN  out-->
 <div class="out">
 	<div class="members">
 		<div class="members__container">
@@ -125,7 +127,7 @@
 			<i class="aid__icons icon-mail"></i>
 			<h4>розсилка новин</h4>
 			<div class="aid__sign">
-				<form class="" action="index.html" method="post">
+				<form class="" action="" method="post">
 					<input type="email" name="name" value="" placeholder="Ваш e-mail">
 					<button type="submit" name="button"><i class="icon-arrow"></i></button>
 				</form>
@@ -152,8 +154,8 @@
 	</div>
 	<section class="content">
 		<div class="col-left">
+			<!-- BEGIN  sidebar -->
 			<aside class="progress">
-			
 			  <ul>
 			    <li>
 			      <a href="#">
@@ -178,7 +180,9 @@
 			    <li><a href="#"></a></li>
 			  </ul>
 			</aside>
+			<!-- END sidebar -->
 			
+			<!-- BEGIN  blog -->
 			<section class="blog">
 			  <div class="blog__item">
 			    <div class="blog__data">
@@ -203,18 +207,32 @@
 			    <button type="button" name="button"><i class="load"></i></button>
 			  </div>
 			</section>
+			<!-- END blog -->
 			
 		</div>
 		<div class="col-right">
+			<!-- BEGIN  news -->
 			<article class="news">
 			  <div class="news__btns">
-			    <select class="news__select" name="activity">
-			    </select>
-			    <select class="news__select" name="fact">
-			    </select>
-			    <select class="news__select" name="date">
-			    </select>
-			    <button type="submit" name="sort" class="news__btn-sort"></button>
+			    <form action="#" method="post">
+			      <select class="news__select turnintodropdown" name="activity">
+			        <option>Вид діяльності</option>
+			        <option>Е-врядування</option>
+			        <option>ЖКГ</option>
+			      </select>
+			      <select class="news__select turnintodropdown" name="fact">
+			        <option>Тип події</option>
+			        <option>Звернення</option>
+			        <option>Проекти</option>
+			        <option>Реформи</option>
+			      </select>
+			      <select class="news__select turnintodropdown" name="date">
+			        <option>Дата</option>
+			        <option>червень 2016</option>
+			        <option>липень 2016</option>
+			      </select>
+			      <button type="submit" name="sort" class="news__btn-sort"></button>
+			    </form>
 			  </div>
 			  <section class="news__item">
 			    <div class="news__info">
@@ -311,20 +329,67 @@
 			      <p class="news__text"></p>
 			    </div>
 			  </section>
-			  <div class="news__more">  
+			  <div class="news__more">
 			    <button type="button" name="button" class="news__load"><i class="load"></i></button>
 			  </div>
 			</article>
+			<!-- END news -->
 			
 		</div>
 	</section>
+	<!-- BEGIN  fraction -->
+	<section class="fraction">
+	  <a href="#" class="fraction__item">
+	    <div class="fraction__img" background-image></div>
+	    <div class="fraction__info">
+	      <h6 class="fraction__name">Сергій Гусовський</h6>
+	      <p class="fraction__post">власник компанії  &laquo;Ресторани Гусовського&raquo;</p>
+	      <button type="button" name="button" class="fraction__btn is-vita"></button>
+	    </div>
+	  </a>
+	</section>
+	<!-- END fraction -->
+	
 </div>
+<!-- END out-->
+<!-- BEGIN  footer -->
 <footer class="footer">
   <div class="footer__wrap">
     <div class="footer__left-col">
       <div class="footer__logo"><a href="index.html"><img src="img/logo.svg" width="132"/></a></div>
-      <div class="footer__contacts"></div>
-      <div class="footer__newsletter"></div>
+      <div class="footer__contacts">
+        <ul class="footer__contact-item">
+          <li class="title">КИЇВСЬКИЙ ОСЕРЕДОК  ОБ’ЄДНАННЯ «САМОПОМІЧ»:</li>
+          <li>
+            <p>ЕЛ. ПОШТА: <a href="mailto:kyiv@samopomich.ua">kyiv@samopomich.ua</a></p>
+            <p>ТЕЛ. : <a href="tel:0445370753">044 537 07 53</a></p>
+          </li>
+        </ul>
+        <ul class="footer__contact-item">
+          <li class="title">ГРОМАДСЬКА ЮРИДИЧНА  ПРИЙМАЛЬНЯ:</li>
+          <li>
+            <p>Запис на прийом за телефоном</p>
+            <p>ТЕЛ. : <a href="tel:0443385878">044 338 58 78</a></p>
+          </li>
+        </ul>
+        <ul class="footer__contact-item">
+          <li class="title">КОНТАКТИ ЗІ ЗМІ:</li>
+          <li>
+            <p>ЕЛ. ПОШТА: <a href="mailto:press.kyiv@samopomich.ua">press.kyiv@samopomich.ua</a></p>
+            <p>ТЕЛ. : <a href="tel:0445370753">044 537 07 53</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__mail">
+    		<i class="icon-mail"></i>
+    		<h4>розсилка новин</h4>
+    		<div class="footer__sign">
+    			<form class="" action="" method="post">
+    				<input type="email" name="name" value="" placeholder="Ваш e-mail">
+    				<button type="submit" name="button"><i class="icon-arrow"></i></button>
+    			</form>
+    		</div>
+      </div>
     </div>
     <div class="footer__nav">
       <ul class="footer__menu">
@@ -431,7 +496,7 @@
     </div>
   </div>
 </footer>
+<!-- END footer -->
 
-<!-- END out-->
 </body>
 </html>
