@@ -242,26 +242,27 @@ a { text-decoration: none; color: inherit; }
 .titles .col-right { position: relative; padding: 73px 0 0 183px; min-height: 190px; }
 .titles .col-right::before { content: ""; position: absolute; top: 28px; bottom: 28px; left: 0; border-right: 1px dotted #adadad; }
 
-.news__btns { width: 100%; overflow: hidden; padding: 10px 60px; background-color: #f7f7f7; }
-
-.trigger { position: relative; float: left; overflow: hidden; padding: 10px 30px 0 15px; margin-right: 7px; height: 35px; min-width: 110px; font-family: "PFDDmed", sans-serif; font-size: 12px; color: #585858; text-transform: uppercase; -webkit-border-radius: 2px; border-radius: 2px; border: 1px solid #d9d9d9; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
-
-.activetrigger { float: left; clear: both; padding: 10px 30px 0 15px; margin-right: 7px; height: 35px; min-width: 110px; border: 1px solid #d9d9d9; font-family: "PFDDmed", sans-serif; font-size: 12px; color: #585858; text-transform: uppercase; display: block; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-.dropcontainer ul { clear: both; float: left; font-family: "PFDDmed", sans-serif; font-size: 12px; color: #585858; text-transform: uppercase; border: 1px solid #d9d9d9; list-style-type: none; width: inherit; z-index: 100; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-.dropcontainer ul li { padding: 5px; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
-
-.dropcontainer ul li:hover { background: #f5f5f5; outline: none; }
-
-.dropcontainer ul li:first-child { display: none; }
-
-.dropcontainer ul li:last-child { border-bottom: none; }
-
-.dropdownhidden { display: none; }
-
-.dropdownvisible { height: auto; }
-
+.news__btns { width: 100%; overflow: hidden; padding: 10px 60px; background-color: #f7f7f7; border-bottom: 1px solid #d9d9d9; border-right: 1px solid #d9d9d9; }
+.news__select-box { float: left; background-color: #fff; padding-right: 8px; overflow: hidden; margin-right: 7px; -webkit-border-radius: 2px; border-radius: 2px; border: 1px solid #d9d9d9; }
+.news__select { float: left; min-width: 110px; padding: 8px; font-family: "PFDDmed", sans-serif; font-size: 12px; line-height: 1; color: #585858; text-transform: uppercase; border: none; }
+.news__btn-sort { float: right; min-width: 150px; height: 35px; background-color: #007848; -webkit-border-radius: 2px; border-radius: 2px; font-family: "PFDDbold", sans-serif; font-size: 13px; color: #fff; text-transform: uppercase; margin-right: 12px; }
+.news__mounth { width: 100%; text-align: center; padding: 15px 0; }
+.news__mounth button { display: inline-block; padding: 10px 15px; background-color: #ffd800; font-family: "PFDDbold", sans-serif; font-size: 13px; text-transform: uppercase; color: #454545; }
+.news__container { width: 100%; padding: 0 60px; }
+.news__decor { width: 100%; text-align: center; padding: 12px 0; color: #dcdcdc; font-size: 51px; line-height: 1; }
+.news__item { width: 100%; overflow: hidden; border: 1px solid #d0d0d0; }
+.news__item:hover { border-color: #ffd800; }
+.news__item:hover .news__head { background-color: #ffd800; border-color: #ffd800; color: #454545; }
+.news__item:hover .news__info { border-color: #ffd800; }
+.news__info { width: 22%; overflow: inherit; float: left; border-right: 1px solid #d0d0d0; text-align: center; }
+.news__head { display: block; width: 100%; padding: 20px 0; border-bottom: 1px solid #d9d9d9; background-color: #f7f7f7; font-family: "PFDDbold", sans-serif; font-size: 12px; color: #007848; line-height: 1; }
+.news__date { display: inline-block; width: 100%; margin: 20px 0; color: #000; font-family: "PFDDbold", sans-serif; font-size: 16px; line-height: 1; }
+.news__author { padding-bottom: 20px; vertical-align: bottom; }
+.news__author a { font-family: "PFDDreg", sans-serif; font-size: 15px; line-height: 2; }
+.news__author span { display: inline-block; width: 100%; font-family: "PFDDbold", sans-serif; font-size: 10px; line-height: 1; text-transform: uppercase; }
+.news__content { width: 78%; float: left; }
+.news__title { padding: 20px 20px 25px 20px; font-family: "PFDDbold", sans-serif; font-size: 16px; text-transform: uppercase; line-height: 1.562; }
+.news__text { padding: 0 20px 20px 20px; font-size: 15px; line-height: 1.333; color: #555555; vertical-align: bottom; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 
