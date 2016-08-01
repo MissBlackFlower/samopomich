@@ -1,0 +1,64 @@
+.fraction
+  width: 100%
+  overflow: hidden
+  text-align: center
+  &__title
+    margin-top: 55px
+    +pfdB
+    font-size: 30px
+    text-transform: uppercase
+    line-height: 1.5
+  &__subtitle
+    +pfdR
+    font-size: 15px
+  &__slick
+    overflow: hidden
+    margin: 55px 0 50px 0
+  &__item
+    float: left
+    width: 200px
+    height: 300px
+    margin: 0 24px
+    border: 1px solid $light-gray-line
+    &:hover
+      border-color: $yellow
+      .is-hidden
+        display: inline-block
+      .fraction__info
+        padding-top: 0
+      .fraction__name
+        padding-top: 10%
+      .fraction__post
+        padding-bottom: 10%
+      .fraction__img
+        filter: none
+        filter: none
+  &__img
+    background-position: top center
+    background-size: cover
+    filter: grayscale(100%)
+    filter: gray
+    width: 100%
+    height: 150px
+  &__info
+    padding: 20px
+    height: 50%
+    +pfdM
+    line-height: 1.5
+  &__name
+    font-size: 18px
+    padding-top: 20%
+  &__post
+    display: inline-block
+    width: 100%
+    padding-bottom: 20%
+    font-size: 10px
+    text-transform: uppercase
+  &__btn
+    +pfdB
+    font-size: 11px
+    text-transform: uppercase
+    width: 90px
+    height: 35px
+    background-color: $yellow
+    color: $dark-gray

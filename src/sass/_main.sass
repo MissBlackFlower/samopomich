@@ -203,29 +203,27 @@
       &:hover
         i
           padding-left: 7px
-
-.titles
+.content
   width: 100%
-  overflow: hidden
-  min-height: 190px
-  border-top: 1px solid $light-gray-line
-  border-bottom: 1px solid $light-gray-line
-  +pfdR
-  font-size: 15px
-  h2
-    padding-bottom: 4px
-    font-size: 30px
-    line-height: 1
-    +pfdL
-  b
-    +pfdB
-  .col-left
+  &__left-title,
+  &__right-title
+    width: 100%
     min-height: 190px
+    border-bottom: 1px solid $light-gray-line
+    +pfdR
+    font-size: 15px
+    h2
+      padding-bottom: 4px
+      font-size: 30px
+      line-height: 1
+      +pfdL
+    b
+      +pfdB
+  &__left-title
     padding: 73px 0 0 87px
-  .col-right
+  &__right-title
     position: relative
     padding: 73px 0 0 183px
-    min-height: 190px
     &::before
       content: ""
       position: absolute

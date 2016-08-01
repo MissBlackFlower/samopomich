@@ -1,4 +1,7 @@
 .news
+  width: 100%
+  border-left: 1px solid $light-gray-line
+  margin-left: -1px
   &__btns
     width: 100%
     overflow: hidden
@@ -67,11 +70,11 @@
         background-color: $yellow
         border-color: $yellow
         color: $dark-gray
+      .news__content,
       .news__info
         border-color: $yellow
   &__info
     width: 22%
-    overflow: inherit
     float: left
     border-right: 1px solid $grey-line-mail
     text-align: center
@@ -83,6 +86,7 @@
     background-color: $gray-bg
     +pfdB
     font-size: 12px
+    text-transform: uppercase
     color: $green
     line-height: 1
   &__date
@@ -110,18 +114,76 @@
   &__content
     width: 78%
     float: left
+    border-left: 1px solid $grey-line-mail
+    margin-left: -1px
+    .news__author
+      a,span
+        display: inline
+        width: auto
+        padding: 0
+  &__img
+    float: left
+    margin: 20px 25px 25px 20px
+    background-color: $yellow
+    ~ .news__title
+      padding-top: 30px
   &__title
-    padding: 20px 20px 25px 20px
+    padding: 10px 25px 25px 20px
     +pfdB
     font-size: 16px
     text-transform: uppercase
     line-height: 1.562
   &__text
+    display: inline-block
     padding: 0 20px 20px 20px
+    +pfdR
     font-size: 15px
     line-height: 1.333
     color: $news-txt
     vertical-align: bottom
   &__link
+    color: $news-link
+    text-decoration: underline
   &__quote
+    display: inline-block
+    &::before
+      display: inline-block
+      width: 100%
+      content: '\201C'
+      font-size: 40px
+      font-weight: bold
+      line-height: 1
+    span
+      +pfdB
+      font-size: 10px
+      line-height: 1
+    .quote-name
+      +pfdR
+      font-size: 15px
+      line-height: 1
+      text-transform: none
   &__gallery
+  &__more
+    width: 100%
+    padding: 50px 0
+    text-align: center
+    button
+      display: inline-block
+      border-radius: 2px
+      padding: 10px 15px 10px 10px
+      background-color: $yellow
+      +pfdB
+      font-size: 13px
+      text-transform: uppercase
+      color: $dark-gray
+      transition: all .2s
+      i
+        margin-right: 30px
+        font-size: 18px
+        vertical-align: middle
+        color: $white
+      &:hover
+        background-color: $green
+        color: $white
+        i
+          transform: rotate(90deg)

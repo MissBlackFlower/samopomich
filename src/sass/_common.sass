@@ -59,6 +59,7 @@ $head-border: #e5e5e5
 $gray-select: #dadada
 $select-txt: #585858
 $news-txt: #555555
+$news-link: #2a73b6
 $grey-line-mail: #d0d0d0
 $grey-popup: #dcdcdc
 $dots: #adadad
@@ -78,15 +79,21 @@ body
 	position: relative
 	margin: auto
 
+.is-hidden
+	display: none
+
 a
 	text-decoration: none
 	color: inherit
 
 .content
 	overflow: hidden
+	border-bottom: 1px solid $light-gray-line
 .col-left
 	width: 38.7%
 	float: left
+	border-top: 1px solid $light-gray-line
 .col-right
 	width: 61.3%
 	float: left
+	border-top: 1px solid $light-gray-line
