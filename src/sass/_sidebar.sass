@@ -1,12 +1,16 @@
 .circle-path
-  transform-origin: 50% 50%
-  transform: rotate(-45deg)
-  stroke-dasharray: $dash
+  stroke-dasharray: $dash, $dash
   stroke-dashoffset: -$dash
 @each $s in $percents
   .is-proc#{$s}
     +draw($s, dash+$s)
     +andraw($s, back+$s)
+    .progress__line
+      &::after
+        width: $s + px
+    .progress__proc
+      &::after
+        content: '#{$s}%'
     &:hover
       background-color: $gray-bg
       border-right: 5px solid $yellow
@@ -15,6 +19,9 @@
         animation-fill-mode: forwards
       .progress__small
         transform: rotate(($angle*$s))
+      .progress__line
+        &::after
+          background-color: $yellow
     &:not(:hover)
       .circle-path
         animation: back+$s 1s ease
@@ -23,19 +30,22 @@
   &__item
     width: 100%
     float: left
-    padding-left: 60px
-    // border-right: 5px solid transparent
     margin-right: -1px
     background-color: $white
     border-bottom: 1px solid $light-gray-line
+    transition: all 0.2s
+    a
+      display: block
+      overflow: hidden
+      padding-left: 60px
   &__circle
     float: left
+    overflow: hidden
+    position: relative
+    z-index: 20
     width: 120px
     height: 120px
-    position: relative
-    overflow: hidden
     text-align: center
-    z-index: 20
     svg
       position: absolute
       top: 50%
@@ -62,9 +72,34 @@
     border-radius: 50%
     border: 1px solid $grey-popup
   &__text
-    padding: 35px 0 30px 0
+    padding-top: 30px
     h6
-      display: inline-block
+      display: block
+      padding-bottom: 20px
       +pfdL
       font-size: 22px
+      line-height: 1
+      text-transform: uppercase
+    p
+      float: left
+      margin-right: 18px
+      +pfdM
+      font-size: 10px
+      text-transform: uppercase
+      line-height: 1
+  &__line
+    &::after
+      content: ""
+      display: block
+      height: 3px
+      margin-top: 4px
+      background-color: $green
+      vertical-align: bottom
+      transition: all 0.2s
+  &__proc
+    &::after
+      display: inline-block
+      +pfdR
+      font-size: 20px
+      line-height: 1
       text-transform: uppercase

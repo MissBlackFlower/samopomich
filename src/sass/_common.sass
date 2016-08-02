@@ -47,6 +47,16 @@
 =draw($procent, $name)
 	$part: (-100) + ($procent)
 	$lengh: ($part)*1%
+	@-ms-keyframes #{$name}
+		0%
+			stroke-dashoffset: -$dash
+		100%
+			stroke-dashoffset: $lengh
+	@-moz-keyframes #{$name}
+		0%
+			stroke-dashoffset: -$dash
+		100%
+			stroke-dashoffset: $lengh
 	@keyframes #{$name}
 		0%
 			stroke-dashoffset: -$dash
@@ -55,6 +65,16 @@
 =andraw($procent, $name)
 	$part: (-100) + ($procent)
 	$lengh: ($part)*1%
+	@-ms-keyframes #{$name}
+		0%
+			stroke-dashoffset: $lengh
+		100%
+			stroke-dashoffset: -$dash
+	@-moz-keyframes #{$name}
+		0%
+			stroke-dashoffset: $lengh
+		100%
+			stroke-dashoffset: -$dash
 	@keyframes #{$name}
 		0%
 			stroke-dashoffset: $lengh

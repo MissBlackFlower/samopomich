@@ -202,7 +202,7 @@ a { text-decoration: none; color: inherit; }
 .members__post { display: inline-block; width: 100%; font-family: "PFDDreg", sans-serif; font-size: 15px; color: #fff; line-height: 1; }
 .members__post span { text-transform: uppercase; }
 
-.aid { position: relative; max-width: 1140px; min-height: 175px; margin: auto; margin-top: 404px; border-top: 5px solid #ffd800; background-color: #fff; }
+.aid { position: relative; max-width: 1140px; min-height: 175px; margin: auto; margin-top: 404px; border-top: 5px solid #ffd800; background-color: #fff; z-index: 5000; }
 .aid:before, .aid:after { content: ""; position: absolute; top: 0; width: 0px; height: 0px; border-style: solid; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25); opacity: 0.25; }
 .aid:before { left: 100%; border-width: 81px 0 0 6px; border-color: transparent transparent transparent #000; }
 .aid:after { right: 100%; border-width: 0 0 81px 6px; border-color: transparent transparent #000 transparent; }
@@ -245,117 +245,128 @@ a { text-decoration: none; color: inherit; }
 .content__right-title { position: relative; padding: 73px 0 0 183px; }
 .content__right-title::before { content: ""; position: absolute; top: 28px; bottom: 28px; left: 0; border-right: 1px dotted #adadad; }
 
-.circle-path { -webkit-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); stroke-dasharray: 100%; stroke-dashoffset: -100%; }
-
+.circle-path { stroke-dasharray: 100%, 100%; stroke-dashoffset: -100%; }
 @-webkit-keyframes dash86 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -14%; } }
-
 @keyframes dash86 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -14%; } }
 @-webkit-keyframes back86 { 0% { stroke-dashoffset: -14%; }
   100% { stroke-dashoffset: -100%; } }
 @keyframes back86 { 0% { stroke-dashoffset: -14%; }
   100% { stroke-dashoffset: -100%; } }
+.is-proc86 .progress__line::after { width: 86px; }
+.is-proc86 .progress__proc::after { content: "86%"; }
 .is-proc86:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
 .is-proc86:hover .circle-path { -webkit-animation: dash86 1s ease; animation: dash86 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 .is-proc86:hover .progress__small { -webkit-transform: rotate(-309.6deg); -ms-transform: rotate(-309.6deg); transform: rotate(-309.6deg); }
+.is-proc86:hover .progress__line::after { background-color: #ffd800; }
 .is-proc86:not(:hover) .circle-path { -webkit-animation: back86 1s ease; animation: back86 1s ease; }
-
 @-webkit-keyframes dash78 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -22%; } }
-
 @keyframes dash78 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -22%; } }
 @-webkit-keyframes back78 { 0% { stroke-dashoffset: -22%; }
   100% { stroke-dashoffset: -100%; } }
 @keyframes back78 { 0% { stroke-dashoffset: -22%; }
   100% { stroke-dashoffset: -100%; } }
+.is-proc78 .progress__line::after { width: 78px; }
+.is-proc78 .progress__proc::after { content: "78%"; }
 .is-proc78:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
 .is-proc78:hover .circle-path { -webkit-animation: dash78 1s ease; animation: dash78 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 .is-proc78:hover .progress__small { -webkit-transform: rotate(-280.8deg); -ms-transform: rotate(-280.8deg); transform: rotate(-280.8deg); }
+.is-proc78:hover .progress__line::after { background-color: #ffd800; }
 .is-proc78:not(:hover) .circle-path { -webkit-animation: back78 1s ease; animation: back78 1s ease; }
-
 @-webkit-keyframes dash92 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -8%; } }
-
 @keyframes dash92 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -8%; } }
 @-webkit-keyframes back92 { 0% { stroke-dashoffset: -8%; }
   100% { stroke-dashoffset: -100%; } }
 @keyframes back92 { 0% { stroke-dashoffset: -8%; }
   100% { stroke-dashoffset: -100%; } }
+.is-proc92 .progress__line::after { width: 92px; }
+.is-proc92 .progress__proc::after { content: "92%"; }
 .is-proc92:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
 .is-proc92:hover .circle-path { -webkit-animation: dash92 1s ease; animation: dash92 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 .is-proc92:hover .progress__small { -webkit-transform: rotate(-331.2deg); -ms-transform: rotate(-331.2deg); transform: rotate(-331.2deg); }
+.is-proc92:hover .progress__line::after { background-color: #ffd800; }
 .is-proc92:not(:hover) .circle-path { -webkit-animation: back92 1s ease; animation: back92 1s ease; }
-
 @-webkit-keyframes dash84 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -16%; } }
-
 @keyframes dash84 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -16%; } }
 @-webkit-keyframes back84 { 0% { stroke-dashoffset: -16%; }
   100% { stroke-dashoffset: -100%; } }
 @keyframes back84 { 0% { stroke-dashoffset: -16%; }
   100% { stroke-dashoffset: -100%; } }
+.is-proc84 .progress__line::after { width: 84px; }
+.is-proc84 .progress__proc::after { content: "84%"; }
 .is-proc84:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
 .is-proc84:hover .circle-path { -webkit-animation: dash84 1s ease; animation: dash84 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 .is-proc84:hover .progress__small { -webkit-transform: rotate(-302.4deg); -ms-transform: rotate(-302.4deg); transform: rotate(-302.4deg); }
+.is-proc84:hover .progress__line::after { background-color: #ffd800; }
 .is-proc84:not(:hover) .circle-path { -webkit-animation: back84 1s ease; animation: back84 1s ease; }
-
 @-webkit-keyframes dash57 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -43%; } }
-
 @keyframes dash57 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -43%; } }
 @-webkit-keyframes back57 { 0% { stroke-dashoffset: -43%; }
   100% { stroke-dashoffset: -100%; } }
 @keyframes back57 { 0% { stroke-dashoffset: -43%; }
   100% { stroke-dashoffset: -100%; } }
+.is-proc57 .progress__line::after { width: 57px; }
+.is-proc57 .progress__proc::after { content: "57%"; }
 .is-proc57:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
 .is-proc57:hover .circle-path { -webkit-animation: dash57 1s ease; animation: dash57 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 .is-proc57:hover .progress__small { -webkit-transform: rotate(-205.2deg); -ms-transform: rotate(-205.2deg); transform: rotate(-205.2deg); }
+.is-proc57:hover .progress__line::after { background-color: #ffd800; }
 .is-proc57:not(:hover) .circle-path { -webkit-animation: back57 1s ease; animation: back57 1s ease; }
-
 @-webkit-keyframes dash36 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -64%; } }
-
 @keyframes dash36 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -64%; } }
 @-webkit-keyframes back36 { 0% { stroke-dashoffset: -64%; }
   100% { stroke-dashoffset: -100%; } }
 @keyframes back36 { 0% { stroke-dashoffset: -64%; }
   100% { stroke-dashoffset: -100%; } }
+.is-proc36 .progress__line::after { width: 36px; }
+.is-proc36 .progress__proc::after { content: "36%"; }
 .is-proc36:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
 .is-proc36:hover .circle-path { -webkit-animation: dash36 1s ease; animation: dash36 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 .is-proc36:hover .progress__small { -webkit-transform: rotate(-129.6deg); -ms-transform: rotate(-129.6deg); transform: rotate(-129.6deg); }
+.is-proc36:hover .progress__line::after { background-color: #ffd800; }
 .is-proc36:not(:hover) .circle-path { -webkit-animation: back36 1s ease; animation: back36 1s ease; }
-
 @-webkit-keyframes dash63 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -37%; } }
-
 @keyframes dash63 { 0% { stroke-dashoffset: -100%; }
   100% { stroke-dashoffset: -37%; } }
 @-webkit-keyframes back63 { 0% { stroke-dashoffset: -37%; }
   100% { stroke-dashoffset: -100%; } }
 @keyframes back63 { 0% { stroke-dashoffset: -37%; }
   100% { stroke-dashoffset: -100%; } }
+.is-proc63 .progress__line::after { width: 63px; }
+.is-proc63 .progress__proc::after { content: "63%"; }
 .is-proc63:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
 .is-proc63:hover .circle-path { -webkit-animation: dash63 1s ease; animation: dash63 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 .is-proc63:hover .progress__small { -webkit-transform: rotate(-226.8deg); -ms-transform: rotate(-226.8deg); transform: rotate(-226.8deg); }
+.is-proc63:hover .progress__line::after { background-color: #ffd800; }
 .is-proc63:not(:hover) .circle-path { -webkit-animation: back63 1s ease; animation: back63 1s ease; }
 
 .progress { overflow: hidden; }
-.progress__item { width: 100%; float: left; padding-left: 60px; margin-right: -1px; background-color: #fff; border-bottom: 1px solid #d9d9d9; }
-.progress__circle { float: left; width: 120px; height: 120px; position: relative; overflow: hidden; text-align: center; z-index: 20; }
+.progress__item { width: 100%; float: left; margin-right: -1px; background-color: #fff; border-bottom: 1px solid #d9d9d9; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.progress__item a { display: block; overflow: hidden; padding-left: 60px; }
+.progress__circle { float: left; overflow: hidden; position: relative; z-index: 20; width: 120px; height: 120px; text-align: center; }
 .progress__circle svg { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 .progress__small { position: absolute; width: 100%; height: 100%; z-index: 10; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: all 1s; transition: all 1s; }
 .progress__small svg { width: inherit; height: inherit; }
 .progress__img { position: absolute; width: 72px; height: 72px; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: -1; -webkit-border-radius: 50%; border-radius: 50%; border: 1px solid #dcdcdc; }
-.progress__text { padding: 35px 0 30px 0; }
-.progress__text h6 { display: inline-block; font-family: "PFDDlight", sans-serif; font-size: 22px; text-transform: uppercase; }
+.progress__text { padding-top: 30px; }
+.progress__text h6 { display: block; padding-bottom: 20px; font-family: "PFDDlight", sans-serif; font-size: 22px; line-height: 1; text-transform: uppercase; }
+.progress__text p { float: left; margin-right: 18px; font-family: "PFDDmed", sans-serif; font-size: 10px; text-transform: uppercase; line-height: 1; }
+.progress__line::after { content: ""; display: block; height: 3px; margin-top: 4px; background-color: #007848; vertical-align: bottom; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.progress__proc::after { display: inline-block; font-family: "PFDDreg", sans-serif; font-size: 20px; line-height: 1; text-transform: uppercase; }
 
-.blog { background-color: #f7f7f7; }
+.blog { background-color: #f7f7f7; border-right: 1px solid #d9d9d9; }
 .blog__title { padding: 50px 0 0 85px; font-family: "PFDDbold", sans-serif; font-size: 26px; text-transform: uppercase; line-height: 1.5; }
 .blog__item { width: 100%; padding: 35px 0 35px 85px; overflow: hidden; }
 .blog__item:hover { background-color: #fff; }
