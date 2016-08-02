@@ -1,43 +1,70 @@
+.circle-path
+  transform-origin: 50% 50%
+  transform: rotate(-45deg)
+  stroke-dasharray: $dash
+  stroke-dashoffset: -$dash
+@each $s in $percents
+  .is-proc#{$s}
+    +draw($s, dash+$s)
+    +andraw($s, back+$s)
+    &:hover
+      background-color: $gray-bg
+      border-right: 5px solid $yellow
+      .circle-path
+        animation: dash+$s 1s ease
+        animation-fill-mode: forwards
+      .progress__small
+        transform: rotate(($angle*$s))
+    &:not(:hover)
+      .circle-path
+        animation: back+$s 1s ease
 .progress
+  overflow: hidden
+  &__item
+    width: 100%
+    float: left
+    padding-left: 60px
+    // border-right: 5px solid transparent
+    margin-right: -1px
+    background-color: $white
+    border-bottom: 1px solid $light-gray-line
   &__circle
+    float: left
     width: 120px
     height: 120px
     position: relative
     overflow: hidden
     text-align: center
-    .path
-      stroke-dasharray: 189%
-      stroke-dashoffset: -189%
-    &:hover
-      .path
-        animation: dash 1s ease
-        animation-fill-mode: forwards
-    &:not(:hover)
-      .path
-        animation: back 1s ease
+    z-index: 20
     svg
-      display: inline-block
-      width: 100%
-      height: 100%
-      vertical-align: middle
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
   &__small
     position: absolute
     width: 100%
     height: 100%
+    z-index: 10
     transform: rotate(0deg)
     transition: all 1s
-    &:hover
-      transform: rotate(-309.6deg)
     svg
       width: inherit
       height: inherit
-@keyframes dash
-  0%
-    stroke-dashoffset: -189%
-  100%
-    stroke-dashoffset: -28%
-@keyframes back
-  0%
-    stroke-dashoffset: -28%
-  100%
-    stroke-dashoffset: -189%
+  &__img
+    position: absolute
+    width: 72px
+    height: 72px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: -1
+    border-radius: 50%
+    border: 1px solid $grey-popup
+  &__text
+    padding: 35px 0 30px 0
+    h6
+      display: inline-block
+      +pfdL
+      font-size: 22px
+      text-transform: uppercase

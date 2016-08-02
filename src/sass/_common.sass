@@ -44,6 +44,23 @@
 =PTS
 	font-family: "PT Sans", sans-serif
 
+=draw($procent, $name)
+	$part: (-100) + ($procent)
+	$lengh: ($part)*1%
+	@keyframes #{$name}
+		0%
+			stroke-dashoffset: -$dash
+		100%
+			stroke-dashoffset: $lengh
+=andraw($procent, $name)
+	$part: (-100) + ($procent)
+	$lengh: ($part)*1%
+	@keyframes #{$name}
+		0%
+			stroke-dashoffset: $lengh
+		100%
+			stroke-dashoffset: -$dash
+
 // colors
 $green: #007848
 $yellow: #ffd800
@@ -65,7 +82,9 @@ $grey-line-mail: #d0d0d0
 $grey-popup: #dcdcdc
 $dots: #adadad
 $soc: ( ytb: #d24a43, tw: #3dafea, fb: #4357a8)
-
+$percents: 86, 78, 92, 84, 57, 36, 63
+$dash: 100%
+$angle: -3.6deg
 body
 	+pfdR
 	font-size: 14px

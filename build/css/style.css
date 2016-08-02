@@ -245,30 +245,122 @@ a { text-decoration: none; color: inherit; }
 .content__right-title { position: relative; padding: 73px 0 0 183px; }
 .content__right-title::before { content: ""; position: absolute; top: 28px; bottom: 28px; left: 0; border-right: 1px dotted #adadad; }
 
-.progress__circle { width: 120px; height: 120px; position: relative; overflow: hidden; text-align: center; }
-.progress__circle .path { stroke-dasharray: 189%; stroke-dashoffset: -189%; }
-.progress__circle:hover .path { -webkit-animation: dash 1s ease; animation: dash 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
-.progress__circle:not(:hover) .path { -webkit-animation: back 1s ease; animation: back 1s ease; }
-.progress__circle svg { display: inline-block; width: 100%; height: 100%; vertical-align: middle; }
-.progress__small { position: absolute; width: 100%; height: 100%; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: all 1s; transition: all 1s; }
-.progress__small:hover { -webkit-transform: rotate(-309.6deg); -ms-transform: rotate(-309.6deg); transform: rotate(-309.6deg); }
+.circle-path { -webkit-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); stroke-dasharray: 100%; stroke-dashoffset: -100%; }
+
+@-webkit-keyframes dash86 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -14%; } }
+
+@keyframes dash86 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -14%; } }
+@-webkit-keyframes back86 { 0% { stroke-dashoffset: -14%; }
+  100% { stroke-dashoffset: -100%; } }
+@keyframes back86 { 0% { stroke-dashoffset: -14%; }
+  100% { stroke-dashoffset: -100%; } }
+.is-proc86:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
+.is-proc86:hover .circle-path { -webkit-animation: dash86 1s ease; animation: dash86 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+.is-proc86:hover .progress__small { -webkit-transform: rotate(-309.6deg); -ms-transform: rotate(-309.6deg); transform: rotate(-309.6deg); }
+.is-proc86:not(:hover) .circle-path { -webkit-animation: back86 1s ease; animation: back86 1s ease; }
+
+@-webkit-keyframes dash78 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -22%; } }
+
+@keyframes dash78 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -22%; } }
+@-webkit-keyframes back78 { 0% { stroke-dashoffset: -22%; }
+  100% { stroke-dashoffset: -100%; } }
+@keyframes back78 { 0% { stroke-dashoffset: -22%; }
+  100% { stroke-dashoffset: -100%; } }
+.is-proc78:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
+.is-proc78:hover .circle-path { -webkit-animation: dash78 1s ease; animation: dash78 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+.is-proc78:hover .progress__small { -webkit-transform: rotate(-280.8deg); -ms-transform: rotate(-280.8deg); transform: rotate(-280.8deg); }
+.is-proc78:not(:hover) .circle-path { -webkit-animation: back78 1s ease; animation: back78 1s ease; }
+
+@-webkit-keyframes dash92 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -8%; } }
+
+@keyframes dash92 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -8%; } }
+@-webkit-keyframes back92 { 0% { stroke-dashoffset: -8%; }
+  100% { stroke-dashoffset: -100%; } }
+@keyframes back92 { 0% { stroke-dashoffset: -8%; }
+  100% { stroke-dashoffset: -100%; } }
+.is-proc92:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
+.is-proc92:hover .circle-path { -webkit-animation: dash92 1s ease; animation: dash92 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+.is-proc92:hover .progress__small { -webkit-transform: rotate(-331.2deg); -ms-transform: rotate(-331.2deg); transform: rotate(-331.2deg); }
+.is-proc92:not(:hover) .circle-path { -webkit-animation: back92 1s ease; animation: back92 1s ease; }
+
+@-webkit-keyframes dash84 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -16%; } }
+
+@keyframes dash84 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -16%; } }
+@-webkit-keyframes back84 { 0% { stroke-dashoffset: -16%; }
+  100% { stroke-dashoffset: -100%; } }
+@keyframes back84 { 0% { stroke-dashoffset: -16%; }
+  100% { stroke-dashoffset: -100%; } }
+.is-proc84:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
+.is-proc84:hover .circle-path { -webkit-animation: dash84 1s ease; animation: dash84 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+.is-proc84:hover .progress__small { -webkit-transform: rotate(-302.4deg); -ms-transform: rotate(-302.4deg); transform: rotate(-302.4deg); }
+.is-proc84:not(:hover) .circle-path { -webkit-animation: back84 1s ease; animation: back84 1s ease; }
+
+@-webkit-keyframes dash57 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -43%; } }
+
+@keyframes dash57 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -43%; } }
+@-webkit-keyframes back57 { 0% { stroke-dashoffset: -43%; }
+  100% { stroke-dashoffset: -100%; } }
+@keyframes back57 { 0% { stroke-dashoffset: -43%; }
+  100% { stroke-dashoffset: -100%; } }
+.is-proc57:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
+.is-proc57:hover .circle-path { -webkit-animation: dash57 1s ease; animation: dash57 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+.is-proc57:hover .progress__small { -webkit-transform: rotate(-205.2deg); -ms-transform: rotate(-205.2deg); transform: rotate(-205.2deg); }
+.is-proc57:not(:hover) .circle-path { -webkit-animation: back57 1s ease; animation: back57 1s ease; }
+
+@-webkit-keyframes dash36 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -64%; } }
+
+@keyframes dash36 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -64%; } }
+@-webkit-keyframes back36 { 0% { stroke-dashoffset: -64%; }
+  100% { stroke-dashoffset: -100%; } }
+@keyframes back36 { 0% { stroke-dashoffset: -64%; }
+  100% { stroke-dashoffset: -100%; } }
+.is-proc36:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
+.is-proc36:hover .circle-path { -webkit-animation: dash36 1s ease; animation: dash36 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+.is-proc36:hover .progress__small { -webkit-transform: rotate(-129.6deg); -ms-transform: rotate(-129.6deg); transform: rotate(-129.6deg); }
+.is-proc36:not(:hover) .circle-path { -webkit-animation: back36 1s ease; animation: back36 1s ease; }
+
+@-webkit-keyframes dash63 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -37%; } }
+
+@keyframes dash63 { 0% { stroke-dashoffset: -100%; }
+  100% { stroke-dashoffset: -37%; } }
+@-webkit-keyframes back63 { 0% { stroke-dashoffset: -37%; }
+  100% { stroke-dashoffset: -100%; } }
+@keyframes back63 { 0% { stroke-dashoffset: -37%; }
+  100% { stroke-dashoffset: -100%; } }
+.is-proc63:hover { background-color: #f7f7f7; border-right: 5px solid #ffd800; }
+.is-proc63:hover .circle-path { -webkit-animation: dash63 1s ease; animation: dash63 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+.is-proc63:hover .progress__small { -webkit-transform: rotate(-226.8deg); -ms-transform: rotate(-226.8deg); transform: rotate(-226.8deg); }
+.is-proc63:not(:hover) .circle-path { -webkit-animation: back63 1s ease; animation: back63 1s ease; }
+
+.progress { overflow: hidden; }
+.progress__item { width: 100%; float: left; padding-left: 60px; margin-right: -1px; background-color: #fff; border-bottom: 1px solid #d9d9d9; }
+.progress__circle { float: left; width: 120px; height: 120px; position: relative; overflow: hidden; text-align: center; z-index: 20; }
+.progress__circle svg { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.progress__small { position: absolute; width: 100%; height: 100%; z-index: 10; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: all 1s; transition: all 1s; }
 .progress__small svg { width: inherit; height: inherit; }
+.progress__img { position: absolute; width: 72px; height: 72px; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: -1; -webkit-border-radius: 50%; border-radius: 50%; border: 1px solid #dcdcdc; }
+.progress__text { padding: 35px 0 30px 0; }
+.progress__text h6 { display: inline-block; font-family: "PFDDlight", sans-serif; font-size: 22px; text-transform: uppercase; }
 
-@-webkit-keyframes dash { 0% { stroke-dashoffset: -189%; }
-  100% { stroke-dashoffset: -28%; } }
-
-@keyframes dash { 0% { stroke-dashoffset: -189%; }
-  100% { stroke-dashoffset: -28%; } }
-@-webkit-keyframes back { 0% { stroke-dashoffset: -28%; }
-  100% { stroke-dashoffset: -189%; } }
-@keyframes back { 0% { stroke-dashoffset: -28%; }
-  100% { stroke-dashoffset: -189%; } }
 .blog { background-color: #f7f7f7; }
 .blog__title { padding: 50px 0 0 85px; font-family: "PFDDbold", sans-serif; font-size: 26px; text-transform: uppercase; line-height: 1.5; }
 .blog__item { width: 100%; padding: 35px 0 35px 85px; overflow: hidden; }
 .blog__item:hover { background-color: #fff; }
 .blog__item:hover .blog__record h5 { color: #007848; }
-.blog__item:hover .blog__photo { -webkit-filter: none; filter: none; -webkit-filter: none; filter: none; }
+.blog__item:hover .blog__photo { filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale"); -webkit-filter: grayscale(0%); }
 .blog__data { float: left; width: 18%; text-align: center; }
 .blog__data a, .blog__data span { display: inline-block; width: 100%; }
 .blog__author { margin: 15px 0 23px 0; }
@@ -280,7 +372,7 @@ a { text-decoration: none; color: inherit; }
 .blog__views a:hover { color: #ffd800; }
 .blog__views a:hover i { color: #ffd800; }
 .blog__views i { font-size: 15px; vertical-align: middle; color: #cecece; }
-.blog__photo { width: 100%; height: 71px; -webkit-border-radius: 50%; border-radius: 50%; background-position: top center; background-size: cover; -webkit-filter: grayscale(100%); filter: grayscale(100%); -webkit-filter: gray; filter: gray; }
+.blog__photo { width: 100%; height: 71px; -webkit-border-radius: 50%; border-radius: 50%; background-position: top center; background-size: cover; filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale"); filter: gray; -webkit-filter: grayscale(100%); filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1); -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)"; }
 .blog__record { float: left; width: 82%; padding: 0 70px 0 22px; }
 .blog__record time { font-family: "PFDDreg", sans-serif; font-size: 11px; text-transform: uppercase; }
 .blog__record h5 { padding: 20px 0 25px 0; font-family: "PFDDmed", sans-serif; font-size: 16px; text-transform: uppercase; line-height: 1.25; }
@@ -338,8 +430,8 @@ a { text-decoration: none; color: inherit; }
 .fraction__item:hover .fraction__info { padding-top: 0; }
 .fraction__item:hover .fraction__name { padding-top: 10%; }
 .fraction__item:hover .fraction__post { padding-bottom: 10%; }
-.fraction__item:hover .fraction__img { -webkit-filter: none; filter: none; -webkit-filter: none; filter: none; }
-.fraction__img { background-position: top center; background-size: cover; -webkit-filter: grayscale(100%); filter: grayscale(100%); -webkit-filter: gray; filter: gray; width: 100%; height: 150px; }
+.fraction__item:hover .fraction__img { filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale"); -webkit-filter: grayscale(0%); }
+.fraction__img { background-position: top center; background-size: cover; filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale"); filter: gray; -webkit-filter: grayscale(100%); filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1); -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)"; width: 100%; height: 150px; }
 .fraction__info { padding: 20px; height: 50%; font-family: "PFDDmed", sans-serif; line-height: 1.5; }
 .fraction__name { font-size: 18px; padding-top: 20%; }
 .fraction__post { display: inline-block; width: 100%; padding-bottom: 20%; font-size: 10px; text-transform: uppercase; }
