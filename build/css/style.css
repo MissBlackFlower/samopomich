@@ -245,20 +245,46 @@ a { text-decoration: none; color: inherit; }
 .content__right-title { position: relative; padding: 73px 0 0 183px; }
 .content__right-title::before { content: ""; position: absolute; top: 28px; bottom: 28px; left: 0; border-right: 1px dotted #adadad; }
 
-.blog { padding-left: 85px; background-color: #f7f7f7; }
-.blog__title { font-family: "PFDDbold", sans-serif; font-size: 26px; text-transform: uppercase; line-height: 1.5; }
-.blog__item { width: 100%; padding: 35px 0; overflow: hidden; }
+.progress__circle { width: 120px; height: 120px; position: relative; overflow: hidden; text-align: center; }
+.progress__circle .path { stroke-dasharray: 189%; stroke-dashoffset: -189%; }
+.progress__circle:hover .path { -webkit-animation: dash 1s ease; animation: dash 1s ease; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+.progress__circle:not(:hover) .path { -webkit-animation: back 1s ease; animation: back 1s ease; }
+.progress__circle svg { display: inline-block; width: 100%; height: 100%; vertical-align: middle; }
+.progress__small { position: absolute; width: 100%; height: 100%; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: all 1s; transition: all 1s; }
+.progress__small:hover { -webkit-transform: rotate(-309.6deg); -ms-transform: rotate(-309.6deg); transform: rotate(-309.6deg); }
+.progress__small svg { width: inherit; height: inherit; }
+
+@-webkit-keyframes dash { 0% { stroke-dashoffset: -189%; }
+  100% { stroke-dashoffset: -28%; } }
+
+@keyframes dash { 0% { stroke-dashoffset: -189%; }
+  100% { stroke-dashoffset: -28%; } }
+@-webkit-keyframes back { 0% { stroke-dashoffset: -28%; }
+  100% { stroke-dashoffset: -189%; } }
+@keyframes back { 0% { stroke-dashoffset: -28%; }
+  100% { stroke-dashoffset: -189%; } }
+.blog { background-color: #f7f7f7; }
+.blog__title { padding: 50px 0 0 85px; font-family: "PFDDbold", sans-serif; font-size: 26px; text-transform: uppercase; line-height: 1.5; }
+.blog__item { width: 100%; padding: 35px 0 35px 85px; overflow: hidden; }
+.blog__item:hover { background-color: #fff; }
+.blog__item:hover .blog__record h5 { color: #007848; }
+.blog__item:hover .blog__photo { -webkit-filter: none; filter: none; -webkit-filter: none; filter: none; }
 .blog__data { float: left; width: 18%; text-align: center; }
 .blog__data a, .blog__data span { display: inline-block; width: 100%; }
-.blog__author span { font-family: "PFDDbold", sans-serif; font-size: 10px; text-transform: uppercase; padding-top: 10px; }
+.blog__author { margin: 15px 0 23px 0; }
+.blog__author span { font-family: "PFDDbold", sans-serif; font-size: 10px; text-transform: uppercase; }
 .blog__author a { font-family: "PFDDreg", sans-serif; font-size: 12px; }
+.blog__author a:hover { color: #007848; }
 .blog__views { width: 100%; text-align: left; padding-left: 12px; color: #8b8f95; font-family: "PFDDmed", sans-serif; font-size: 13px; vertical-align: middle; line-height: 1; }
 .blog__views a { display: inline-block; width: 100%; margin: 8px 0; }
+.blog__views a:hover { color: #ffd800; }
+.blog__views a:hover i { color: #ffd800; }
 .blog__views i { font-size: 15px; vertical-align: middle; color: #cecece; }
 .blog__photo { width: 100%; height: 71px; -webkit-border-radius: 50%; border-radius: 50%; background-position: top center; background-size: cover; -webkit-filter: grayscale(100%); filter: grayscale(100%); -webkit-filter: gray; filter: gray; }
 .blog__record { float: left; width: 82%; padding: 0 70px 0 22px; }
 .blog__record time { font-family: "PFDDreg", sans-serif; font-size: 11px; text-transform: uppercase; }
-.blog__record h5 { font-family: "PFDDmed", sans-serif; font-size: 16px; text-transform: uppercase; line-height: 1.25; }
+.blog__record h5 { padding: 20px 0 25px 0; font-family: "PFDDmed", sans-serif; font-size: 16px; text-transform: uppercase; line-height: 1.25; }
+.blog__record p { font-family: "PFDDreg", sans-serif; font-size: 15px; line-height: 1.333; }
 .blog__more { width: 100%; padding: 50px 0 50px 93px; }
 .blog__more button { display: inline-block; -webkit-border-radius: 2px; border-radius: 2px; padding: 10px 15px 10px 10px; background-color: #ffd800; font-family: "PFDDbold", sans-serif; font-size: 13px; text-transform: uppercase; color: #454545; -webkit-transition: all 0.2s; transition: all 0.2s; }
 .blog__more button i { margin-right: 30px; font-size: 18px; vertical-align: middle; color: #fff; }

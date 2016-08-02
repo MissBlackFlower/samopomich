@@ -1,15 +1,23 @@
 .blog
-  padding-left: 85px
   background-color: $gray-bg
   &__title
+    padding: 50px 0 0 85px
     +pfdB
     font-size: 26px
     text-transform: uppercase
     line-height: 1.5
   &__item
     width: 100%
-    padding: 35px 0
+    padding: 35px 0 35px 85px
     overflow: hidden
+    &:hover
+      background-color: $white
+      .blog__record
+        h5
+          color: $green
+      .blog__photo
+        filter: none
+        filter: none
   &__data
     float: left
     width: 18%
@@ -18,14 +26,16 @@
       display: inline-block
       width: 100%
   &__author
+    margin: 15px 0 23px 0
     span
       +pfdB
       font-size: 10px
       text-transform: uppercase
-      padding-top: 10px
     a
       +pfdR
       font-size: 12px
+      &:hover
+        color: $green
   &__views
     width: 100%
     text-align: left
@@ -39,6 +49,10 @@
       display: inline-block
       width: 100%
       margin: 8px 0
+      &:hover
+        color: $yellow
+        i
+          color: $yellow
     i
       font-size: 15px
       vertical-align: middle
@@ -60,11 +74,15 @@
       font-size: 11px
       text-transform: uppercase
     h5
+      padding: 20px 0 25px 0
       +pfdM
       font-size: 16px
       text-transform: uppercase
       line-height: 1.25
-
+    p
+      +pfdR
+      font-size: 15px
+      line-height: 1.333
   &__more
     width: 100%
     padding: 50px 0 50px 93px
